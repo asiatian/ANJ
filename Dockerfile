@@ -5,4 +5,4 @@ WORKDIR /app
 RUN pip install -r requirements.txt
 RUN python manage.py syncdb --noinput
 RUN python manage.py migrate ribbit_app
-CMD python manage.py runserver 0.0.0.0:8000
+CMD python manage.py runserver 0.0.0.0:$PORT
