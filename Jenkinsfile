@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'ubuntu'
-            args '-u root:sudo -v $HOME/workspace/myproject:/myproject'
-        }
-    }
+    agent { dockerfile true }
     stages {
         stage('Test') {
             steps {
